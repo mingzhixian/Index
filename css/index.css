@@ -1,0 +1,143 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+/* 背景部分 */
+body {
+	background-image: url("../img/back.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+/* 终端窗体部分 */
+#terminal_bc {
+	position: absolute;
+	left: 5%;
+	right: 5%;
+	top: 6%;
+	bottom: 6%;
+	width: 90%;
+	height: 88%;
+	background: inherit;
+	filter: blur(12px);
+	border-radius: 18px;
+}
+
+#terminal {
+	position: absolute;
+	left: 5%;
+	right: 5%;
+	top: 6%;
+	bottom: 6%;
+	width: 90%;
+	height: 88%;
+	border-radius: 18px;
+	background-color: rgba(171, 171, 171, 0.4);
+	padding-top: 40px;
+}
+
+/* 终端标题栏部分 */
+#terminal_title {
+	width: 100%;
+	height: 40px;
+	margin-top: -40px;
+	position: relative;
+}
+
+#terminal_title div {
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 40px;
+	color: #a9a9a9;
+}
+
+#terminal_title a {
+	position: absolute;
+	top: 13px;
+	width: 14px;
+	height: 14px;
+	border-radius: 7px;
+}
+
+#terminal_title #shutdown {
+	left: 18px;
+	background-color: #f2a6a6;
+}
+
+#terminal_title #shutdown:hover {
+	background-color: #dc6363;
+}
+
+#terminal_title #max {
+	left: 40px;
+	background-color: #e7e7a1;
+}
+
+#terminal_title #max:hover {
+	background-color: #d7d73c;
+}
+
+#terminal_title #min {
+	left: 62px;
+	background-color: #daffa0;
+}
+
+#terminal_title #min:hover {
+	background-color: #ade650;
+}
+
+/* 终端主体内容部分 */
+#terminal_body {
+	height: 100%;
+	margin: 0 6px 0 14px;
+	padding-bottom: 60px;
+	font-size: 18px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	white-space: pre;
+	color: #121212;
+}
+#terminal_body #usr{
+	color:#547f44;
+}
+#terminal_body #root{
+	color:#6193bc;
+}
+#terminal_body a {
+	color: #121212;
+	text-decoration: none;
+}
+
+#terminal_body a:hover {
+	color: #758f6b;
+}
+
+/* 滚动条 */
+#terminal_body::-webkit-scrollbar {
+	/* 隐藏默认的滚动条 */
+	width: 8px;
+	height: 8px;
+}
+
+/* 滚动条容器 */
+#terminal_body::-webkit-scrollbar-track {
+	margin-bottom: 20px;
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0);
+}
+
+/* 滚动条本体 */
+#terminal_body::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.2);
+}
