@@ -57,7 +57,7 @@ function getHello() {
 
 //获取模块链接
 function getUrl() {
-	var html = "<span id=\"usr\">root@"+getName()+"</span> <span id=\"root\"></span> ./links.sh\n";
+	var html = "<span id=\"usr\">root@"+getName()+"</span> <span id=\"root\">~</span> ./links.sh\n";
 	html += "我的其他站点：\n";
 	html += "<a href=\"https://blog.mingzhixian.top\">博客</a>\n";
 	html += "<a href=\"http://150.158.81.132:8585\">FileShare</a>\n";
@@ -69,6 +69,6 @@ function getUrl() {
 
 //结束
 function getDown(){
-	var html = "<span id=\"usr\">root@"+getName()+"</span> <span id=\"root\"></span>\n";
+	var html = "<span id=\"usr\">root@"+getName()+"</span> <span id=\"root\">~</span>\n";
 	$("#terminal_body").append(html);
 }
