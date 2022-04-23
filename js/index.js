@@ -119,7 +119,7 @@ function getWeather() {
 		html = "ip：" + data.data.ipdata.addr + "  地区：" + data.data.ipdata.area + "\n";
 		//获取天气信息
 		try {
-			html += "天气：" + data.data.tianqi.weather + " 温度：" + data.data.tianqi.temperature + "°" + " " + data.data.tianqi.winddirection + "风" + data.data.tianqi.windpower + "级\n";
+			html += "天气：" + data.data.tianqi.weather + " 温度：" + data.data.tianqi.temperature + "°" + " " + data.data.tianqi.winddirection + "风" + data.data.tianqi.windpower + "级";
 		} catch {
 			html += "天气获取失败！可能使用了代理或地区较偏远。";
 		}
