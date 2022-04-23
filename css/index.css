@@ -12,7 +12,7 @@ body {
 
 /* 背景部分 */
 body {
-	background-image: url("../img/back.png");
+	background-color: #121212;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -41,7 +41,7 @@ body {
 	width: 90%;
 	height: 88%;
 	border-radius: 18px;
-	background-color: rgba(171, 171, 171, 0.4);
+	background-color: rgba(255, 255, 255, 0.4);
 	padding-top: 40px;
 }
 
@@ -58,7 +58,7 @@ body {
 	font-size: 20px;
 	font-weight: bold;
 	line-height: 40px;
-	color: #a9a9a9;
+	color: #c8c8c8;
 }
 
 #terminal_title a {
@@ -108,10 +108,10 @@ body {
 	color: #121212;
 }
 #terminal_body #usr{
-	color:#547f44;
+	color:#54c829;
 }
 #terminal_body #root{
-	color:#6193bc;
+	color:#70bfff;
 }
 #terminal_body a {
 	color: #121212;

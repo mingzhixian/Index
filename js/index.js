@@ -1,6 +1,12 @@
 window.onload = function () {
-	getDate(); //调用第一个函数，顺序调用
+	getBack(); //调用第一个函数，顺序调用
 	//setTimeout("location.reload();", 10000);
+}
+
+//获取背景
+function getBack(){
+	$("body").css("background-image","url(\"https://api.iyk0.com/bing/\")");
+	getDate();
 }
 
 //获取网站用户名称
@@ -10,11 +16,29 @@ function getName() {
 
 //获取时间
 function getDate() {
-	var html = "<span id=\"usr\">root@"+getName()+"</span> <span id=\"root\">~</span> date\n";
+	var html = "<span id=\"usr\">root@" + getName() + "</span> <span id=\"root\">~</span> date\n";
 	var date = new Date();
 	html += "" + date.getMonth() + "月 " + date.getDate() + "日 周" + '日一二三四五六'.charAt(date.getDay()) + "\n";
 	$("#terminal_body").append(html);
-	getWeather();
+	getOneThing();
+}
+
+//一言
+function getOneThing() {
+	var html = "<span id=\"usr\">root@" + getName() + "</span> <span id=\"root\">~</span> ./getOneThing.sh\n";
+	$.ajax({
+		type: "GET",
+		url: "https://api.iyk0.com/gsyy/",
+		timeout: 2000
+	}).done(function (data) {
+		html += data;
+		$("#terminal_body").append(html);
+		getWeather();
+	}).fail(function () {
+		html += "每日一言获取失败！俺正在抢修中。\n";
+		$("#terminal_body").append(html);
+		getWeather();
+	})
 }
 
 //获取天气
@@ -29,7 +53,7 @@ function getWeather() {
 			data = JSON.parse(data);
 		} catch {}
 		//获取地区信息
-		var html = "<span id=\"usr\">root@"+getName()+"</span> <span id=\"root\">~</span> ./weather.sh\n";
+		var html = "<span id=\"usr\">root@" + getName() + "</span> <span id=\"root\">~</span> ./weather.sh\n";
 		html += "ip：" + data.data.ipdata.addr + "  地区：" + data.data.ipdata.area + "\n";
 		//获取天气信息
 		try {
@@ -40,7 +64,7 @@ function getWeather() {
 		$("#terminal_body").append(html);
 		getHello();
 	}).fail(function () {
-		var html = "<span id=\"usr\">root@"+getName()+"</span> <span id=\"root\">~</span> ./weather.sh\n";
+		var html = "<span id=\"usr\">root@" + getName() + "</span> <span id=\"root\">~</span> ./weather.sh\n";
 		html += "天气获取失败！俺正在抓紧时间修。\n";
 		$("#terminal_body").append(html);
 		getHello();
@@ -49,7 +73,7 @@ function getWeather() {
 
 //获取网站介绍
 function getHello() {
-	var html = "<span id=\"usr\">root@"+getName()+"</span> <span id=\"root\">~</span> cat ./me.txt\n";
+	var html = "<span id=\"usr\">root@" + getName() + "</span> <span id=\"root\">~</span> cat ./me.txt\n";
 	html += "你好，此处是鸣之弦的首页！\n";
 	$("#terminal_body").append(html);
 	getUrl();
@@ -57,7 +81,7 @@ function getHello() {
 
 //获取模块链接
 function getUrl() {
-	var html = "<span id=\"usr\">root@"+getName()+"</span> <span id=\"root\">~</span> ./links.sh\n";
+	var html = "<span id=\"usr\">root@" + getName() + "</span> <span id=\"root\">~</span> ./links.sh\n";
 	html += "我的其他站点：\n";
 	html += "<a href=\"https://blog.mingzhixian.top\">博客</a>\n";
 	html += "<a href=\"http://150.158.81.132:8585\">FileShare</a>\n";
@@ -68,7 +92,7 @@ function getUrl() {
 }
 
 //结束
-function getDown(){
-	var html = "<span id=\"usr\">root@"+getName()+"</span> <span id=\"root\">~</span>\n";
+function getDown() {
+	var html = "<span id=\"usr\">root@" + getName() + "</span> <span id=\"root\">~</span>\n";
 	$("#terminal_body").append(html);
 }
