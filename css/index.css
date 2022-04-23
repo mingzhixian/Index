@@ -12,7 +12,7 @@ body {
 
 /* 背景部分 */
 body {
-	background-color: #121212;
+	background-color: #a6a6a6;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -28,7 +28,7 @@ body {
 	width: 90%;
 	height: 88%;
 	background: inherit;
-	filter: blur(12px);
+	filter: blur(16px);
 	border-radius: 18px;
 }
 
@@ -58,7 +58,7 @@ body {
 	font-size: 20px;
 	font-weight: bold;
 	line-height: 40px;
-	color: #c8c8c8;
+	color: #555555;
 }
 
 #terminal_title a {
@@ -105,14 +105,19 @@ body {
 	overflow-y: scroll;
 	overflow-x: hidden;
 	white-space: pre-line;
+	word-break: break-all; 
+	word-wrap: break-word;
 	color: #121212;
 }
-#terminal_body #usr{
-	color:#54c829;
+
+#terminal_body #usr {
+	color: #299700;
 }
-#terminal_body #root{
-	color:#70bfff;
+
+#terminal_body #root {
+	color: #3b8dce;
 }
+
 #terminal_body a {
 	color: #121212;
 	text-decoration: none;
@@ -120,6 +125,20 @@ body {
 
 #terminal_body a:hover {
 	color: #758f6b;
+}
+
+#terminal_body_now_code {
+	border: none;
+	outline: none;
+}
+
+/* sudo */
+
+#terminal_body iframe{
+	width: 100%;
+	height: 100%;
+	border:none;
+	background-color:transparent;
 }
 
 /* 滚动条 */
