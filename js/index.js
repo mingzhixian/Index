@@ -141,6 +141,7 @@ function getLinks() {
 	html += "<a href=\"http://150.158.81.132:8585\">FileShare</a>\n";
 	html += "<a href=\"https://github.com/mingzhixian\">Github</a>\n";
 	html += "<a href=\"https://gitee.com/mingzhixianweb\">Gitee</a>";
+	html += "<a href=\"http://150.158.81.132:8787\">WebIDE</a>";
 	return html;
 }
 
@@ -178,7 +179,6 @@ function sudo() {
 		var keyCode = event.which || event.keyCode;
 		if (keyCode === 13) {
 			window.open("http://150.158.81.132:8686/?hostname=150.158.81.132&username=root&password=" + btoa(password.text()));
-			//$("#terminal_body").html("<iframe src='http://150.158.81.132:8686/?hostname=150.158.81.132&username=root&password=" + btoa(password.text()) + "' scrolling='no' frameborder='0' allowTransparency='true'></iframe>");
 			$("body").off('keydown');
 			$("body").off('keypress');
 			terminal();
