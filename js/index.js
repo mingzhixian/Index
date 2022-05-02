@@ -140,7 +140,7 @@ function getLinks() {
 	html += "<a href=\"https://blog.mingzhixian.top\">博客</a>\n";
 	html += "<a href=\"http://150.158.81.132:8585\">FileShare</a>\n";
 	html += "<a href=\"https://github.com/mingzhixian\">Github</a>\n";
-	html += "<a href=\"https://gitee.com/mingzhixianweb\">Gitee</a>";
+	html += "<a href=\"https://gitee.com/mingzhixianweb\">Gitee</a>\n";
 	html += "<a href=\"http://150.158.81.132:8787\">WebIDE</a>";
 	return html;
 }
